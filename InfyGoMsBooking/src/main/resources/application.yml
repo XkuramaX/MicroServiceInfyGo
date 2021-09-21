@@ -1,0 +1,22 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+  instance:
+    hostname: localhost
+server:
+  port: 9003
+spring:
+  application:
+    name: BOOKING-SERVICE
+  datasource:
+    password: admin
+    url: jdbc:mysql://localhost:3306/bookingms
+    username: root
+  jpa:
+    generate-ddl: false
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl

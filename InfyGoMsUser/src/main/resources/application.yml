@@ -1,0 +1,22 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+  instance:
+    hostname: localhost
+server:
+  port: 9001
+spring:
+  application:
+    name: USER-SERVICE
+  datasource:
+    password: admin
+    url: jdbc:mysql://localhost:3306/userms
+    username: root
+  jpa:
+    generate-ddl: false
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
